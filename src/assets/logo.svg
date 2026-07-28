@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Montserrat:wght@500&amp;display=swap');
+      
+      .brand-title {
+        font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+        font-size: 82px;
+        font-weight: 600;
+        fill: #15803D; /* Vibrant Green */
+        text-anchor: middle;
+      }
+      
+      .brand-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.38em;
+        fill: #DC2626; /* Red */
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- LOGO ICON (Red Mountain & Wave Arc) -->
+  <g id="icon" transform="translate(500, 190) scale(1.15)">
+    <!-- Outer Arc -->
+    <path d="M -115 10 A 120 120 0 1 1 115 10" 
+          fill="none" 
+          stroke="#DC2626" 
+          stroke-width="5" 
+          stroke-linecap="round" />
+
+    <!-- Mountain Peak -->
+    <path d="M -90 10 L -10 -75 L 20 -20" 
+          fill="none" 
+          stroke="#DC2626" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Ocean Wave -->
+    <path d="M -90 10 C -20 10, 20 -40, 50 -40 C 75 -40, 85 -10, 65 0 C 45 10, 40 -15, 60 -15" 
+          fill="none" 
+          stroke="#DC2626" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <g id="text">
+    <!-- Brand Name (Vibrant Green) -->
+    <text x="500" y="420" class="brand-title">KenyaCompass</text>
+    
+    <!-- Subtitle (Red) -->
+    <text x="500" y="480" class="brand-subtitle">YOUR TRAVEL GUIDE</text>
+
+    <!-- Decorative Diamond Accent -->
+    <path d="M 725 465 L 731 473 L 725 481 L 719 473 Z" fill="#9CA3AF" />
+  </g>
+</svg>
