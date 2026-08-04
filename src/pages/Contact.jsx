@@ -1,7 +1,7 @@
 import { MapPin, MessageCircle, Phone, Mail } from "lucide-react";
 
-import Safari from "../assets/safari.jpg";
-
+//import Safari from "../assets/safari.jpg";
+import Safari3 from "../assets/safari3.webp";
 export default function Contact() {
   const fiverrLink = "https://www.fiverr.com/s/R71kG45";
   const whatsappLink = "https://wa.me/254703197935";
@@ -143,7 +143,7 @@ export default function Contact() {
           >
             <div className="md:col-span-6 relative">
               <img
-                src={Safari}
+                src={Safari3}
                 alt="Kenya safari experience"
                 className="
                 rounded-3xl
