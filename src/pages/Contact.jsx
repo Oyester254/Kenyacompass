@@ -10,7 +10,11 @@ export default function Contact() {
     {
       icon: <MapPin />,
       title: "Location",
-      content: <p className="mt-2 text-sm sm:text-base text-gray-600">Kenya</p>,
+      content: (
+        <p className="mt-2 text-sm sm:text-base text-gray-600">
+          Nairobi, Kenya
+        </p>
+      ),
     },
     {
       icon: <MessageCircle />,
