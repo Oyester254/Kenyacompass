@@ -81,13 +81,13 @@ export default function Home() {
 
         <div
           className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-black/80
-        via-black/55
-        to-black/30
-        "
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-black/80
+          via-black/55
+          to-black/30
+          "
         />
 
         <div
@@ -157,7 +157,7 @@ export default function Home() {
               sm:mt-8
               flex
               flex-col
-              xs:flex-row
+              sm:flex-row
               gap-3
               "
             >
@@ -206,12 +206,12 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6">
         <div
           className="
-        max-w-6xl
-        mx-auto
-        grid
-        md:grid-cols-3
-        gap-10
-        "
+          max-w-6xl
+          mx-auto
+          grid
+          md:grid-cols-3
+          gap-10
+          "
         >
           {[
             {
@@ -235,27 +235,11 @@ export default function Home() {
                 {item.icon}
               </div>
 
-              <h3
-                className="
-              mt-4
-              text-lg
-              sm:text-xl
-              font-bold
-              text-[#2f5233]
-              "
-              >
+              <h3 className="mt-4 text-lg sm:text-xl font-bold text-[#2f5233]">
                 {item.title}
               </h3>
 
-              <p
-                className="
-              mt-2
-              text-sm
-              sm:text-base
-              text-[#2f5233]
-              leading-6
-              "
-              >
+              <p className="mt-2 text-sm sm:text-base text-[#2f5233] leading-6">
                 {item.text}
               </p>
             </div>
@@ -263,7 +247,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Remaining sections can stay exactly as your current version */}
+      {/* SERVICES */}
+      <section className="bg-[#f8f7f2] py-12 sm:py-16 md:py-20 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#2f5233]">
+            How we help
+          </h2>
+
+          <p className="mt-4 text-center text-sm sm:text-base text-[#4a2e1e] max-w-2xl mx-auto">
+            From planning your first visit to discovering hidden experiences,
+            Kenya Compass makes exploring Kenya simple.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mt-10">
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DESTINATIONS */}
+      <section className="py-12 sm:py-16 md:py-20 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#2f5233]">
+            Explore Kenya
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mt-10">
+            {destinations.map((destination, index) => (
+              <DestinationCard key={index} {...destination} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#fef2cc] py-12 sm:py-16 px-5 sm:px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#2f5233]">
+            Ready to experience Kenya?
+          </h2>
+
+          <p className="mt-4 text-sm sm:text-base text-[#4a2e1e]">
+            Start planning your journey with Kenya Compass today.
+          </p>
+
+          <Link
+            to="/contact"
+            className="
+            inline-block
+            mt-6
+            bg-[#2f5233]
+            text-white
+            px-7
+            py-3
+            rounded-lg
+            text-sm
+            sm:text-base
+            font-semibold
+            hover:bg-[#4a2e1e]
+            transition
+            "
+          >
+            Get started
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
