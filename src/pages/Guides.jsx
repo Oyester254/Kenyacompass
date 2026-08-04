@@ -644,49 +644,76 @@ export default function Guides() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-[#4a2e1e]">
+        <div className="text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4a2e1e] leading-tight">
             Kenya Travel Guides
           </h1>
 
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-600 leading-6">
             Helpful resources created to make your Kenya experience easier.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-14">
+        <div className="grid sm:grid-cols-2 gap-5 sm:gap-7 md:gap-8 mt-8 sm:mt-12">
           {guides.map((guide, index) => (
             <div
               key={index}
               className="
-              p-8
-              rounded-xl
-              bg-[#F6F1E7]
-              border
-              border-[#E6D8C3]
-              shadow-sm
-              hover:shadow-md
-              transition
-              "
+            p-5
+            sm:p-6
+            md:p-8
+            rounded-xl
+            bg-[#F6F1E7]
+            border
+            border-[#E6D8C3]
+            shadow-sm
+            hover:shadow-md
+            transition
+            "
             >
               <div className="text-[#2f5233]">{guide.icon}</div>
 
-              <h2 className="text-2xl font-bold mt-5 text-[#4a2e1e]">
+              <h2
+                className="
+              text-lg
+              sm:text-xl
+              md:text-2xl
+              font-bold
+              mt-4
+              sm:mt-5
+              text-[#4a2e1e]
+              leading-tight
+            "
+              >
                 {guide.title}
               </h2>
 
-              <p className="mt-4 text-gray-600">{guide.description}</p>
+              <p
+                className="
+              mt-3
+              sm:mt-4
+              text-sm
+              sm:text-base
+              text-gray-600
+              leading-6
+            "
+              >
+                {guide.description}
+              </p>
 
               <button
                 onClick={() => setSelectedGuide(guide)}
                 className="
-                mt-6
-                text-[#2f5233]
-                font-semibold
-                hover:text-[#4a2e1e]
-                "
+              mt-5
+              text-sm
+              sm:text-base
+              text-[#2f5233]
+              font-semibold
+              hover:text-[#4a2e1e]
+              transition
+              "
               >
                 Read Guide →
               </button>
@@ -704,40 +731,47 @@ export default function Guides() {
         flex
         items-center
         justify-center
-        p-6
+        p-3
+        sm:p-6
         z-50
         "
         >
           <div
             className="
           bg-white
-          max-w-3xl
           w-full
-          max-h-[90vh]
+          max-w-3xl
+          max-h-[92vh]
           overflow-y-auto
-          rounded-2xl
-          p-8
+          rounded-xl
+          sm:rounded-2xl
+          p-5
+          sm:p-8
           relative
           "
           >
             <button
               onClick={() => setSelectedGuide(null)}
               className="
-              absolute
-              top-5
-              right-5
-              text-[#2f5233]
-              "
+            absolute
+            top-4
+            right-4
+            text-[#2f5233]
+            "
             >
-              <X size={28} />
+              <X size={22} />
             </button>
 
             <h2
               className="
-            text-3xl
+            text-xl
+            sm:text-2xl
+            md:text-3xl
             font-bold
             text-[#4a2e1e]
-            mb-6
+            mb-5
+            sm:mb-6
+            pr-8
             "
             >
               {selectedGuide.title}
@@ -745,14 +779,22 @@ export default function Guides() {
 
             <div
               className="
-            space-y-5
+            space-y-4
+            sm:space-y-5
+            text-sm
+            sm:text-base
             text-gray-700
-            leading-relaxed
-            [&_h3]:text-xl
+            leading-6
+            sm:leading-7
+
+            [&_h3]:text-lg
+            sm:[&_h3]:text-xl
+
             [&_h3]:font-bold
             [&_h3]:text-[#2f5233]
+
             [&_ul]:list-disc
-            [&_ul]:ml-6
+            [&_ul]:ml-5
             "
             >
               {selectedGuide.content}

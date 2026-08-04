@@ -4,6 +4,7 @@ import Nairobi from "../assets/nairobi.jpg";
 import Safari from "../assets/safari.jpg";
 import Coast from "../assets/coast.jpg";
 import MtKenya from "../assets/mtkenya.jpg";
+
 export default function Destinations() {
   const destinations = [
     {
@@ -36,17 +37,49 @@ export default function Destinations() {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-[#4a2e1e]">Explore Kenya</h1>
-          <p className="mt-5 text-lg text-[#2f5233]">
+        <div className="text-center max-w-3xl mx-auto">
+          <h1
+            className="
+            text-3xl
+            sm:text-4xl
+            md:text-5xl
+            font-bold
+            text-[#4a2e1e]
+            leading-tight
+          "
+          >
+            Explore Kenya
+          </h1>
+
+          <p
+            className="
+            mt-4
+            sm:mt-5
+            text-sm
+            sm:text-base
+            md:text-lg
+            text-[#2f5233]
+            leading-6
+          "
+          >
             Discover some of Kenya's most remarkable destinations and
             experiences.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 mt-14">
+        <div
+          className="
+          grid
+          sm:grid-cols-2
+          gap-6
+          sm:gap-8
+          md:gap-10
+          mt-8
+          sm:mt-12
+        "
+        >
           {destinations.map((destination, index) => (
             <DestinationCard key={index} {...destination} />
           ))}

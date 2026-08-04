@@ -2,44 +2,59 @@ export default function DestinationCard({ image, title, description }) {
   return (
     <div
       className="
-bg-white
-rounded-xl
-overflow-hidden
-shadow-sm
-border
-border-gray-100
-hover:shadow-lg
-transition
-"
+        bg-white
+        rounded-xl
+        overflow-hidden
+        shadow-sm
+        border
+        border-gray-100
+        hover:shadow-lg
+        hover:-translate-y-1
+        transition-all
+        duration-300
+      "
     >
       <img
         src={image}
         alt={`${title} Kenya`}
         loading="lazy"
         className="
-w-full
-h-64
-object-cover
-"
+          w-full
+          h-48
+          sm:h-56
+          md:h-64
+          object-cover
+        "
       />
 
-      <div className="p-6">
+      <div
+        className="
+        p-4
+        sm:p-5
+        md:p-6
+      "
+      >
         <h3
           className="
-text-2xl
-font-bold
-text-[#2f5233]
-"
+            text-xl
+            sm:text-2xl
+            font-bold
+            text-[#2f5233]
+            leading-tight
+          "
         >
           {title}
         </h3>
 
         <p
           className="
-mt-3
-text-[#4a2e1e]
-leading-relaxed
-"
+            mt-2
+            sm:mt-3
+            text-sm
+            sm:text-base
+            text-[#4a2e1e]
+            leading-6
+          "
         >
           {description}
         </p>

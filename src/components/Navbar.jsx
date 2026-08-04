@@ -22,13 +22,26 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#2f5233] sticky top-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-8">
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        px-4
+        sm:px-6
+        py-3
+        sm:py-4
+        flex
+        items-center
+        justify-between
+        "
+      >
         {/* BRAND */}
 
         <Link to="/" className="leading-tight flex-shrink-0">
           <h1
             className="
-            text-2xl
+            text-xl
+            sm:text-2xl
             md:text-3xl
             font-bold
             text-white
@@ -40,19 +53,20 @@ export default function Navbar() {
 
           <p
             className="
-            text-xs
+            text-[10px]
+            sm:text-xs
             md:text-sm
             text-[#fef2cc]
-            mt-1
+            mt-0.5
             "
           >
             Authentic Kenyan Travel Experiences
           </p>
         </Link>
 
-        {/* DESKTOP NAVIGATION */}
+        {/* DESKTOP NAV */}
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8 lg:gap-10">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -64,18 +78,13 @@ export default function Navbar() {
               tracking-wide
               hover:text-[#fef2cc]
               transition
-              duration-300
               "
             >
               {link.name}
             </Link>
           ))}
 
-          {/* CONTACT ICONS */}
-
-          <div className="flex items-center gap-3 ml-2">
-            {/* WHATSAPP */}
-
+          <div className="flex items-center gap-3 ml-1">
             <a
               href={whatsappLink}
               target="_blank"
@@ -84,18 +93,15 @@ export default function Navbar() {
               className="
               bg-[#fef2cc]
               text-[#2f5233]
-              p-2.5
+              p-2
               rounded-full
               hover:bg-white
               hover:scale-110
               transition
-              duration-300
               "
             >
-              <FaWhatsapp size={22} />
+              <FaWhatsapp size={20} />
             </a>
-
-            {/* EMAIL */}
 
             <a
               href={emailLink}
@@ -104,21 +110,20 @@ export default function Navbar() {
               border
               border-[#fef2cc]
               text-[#fef2cc]
-              p-2.5
+              p-2
               rounded-full
               hover:bg-[#fef2cc]
               hover:text-[#2f5233]
               hover:scale-110
               transition
-              duration-300
               "
             >
-              <MdEmail size={23} />
+              <MdEmail size={21} />
             </a>
           </div>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE BUTTON */}
 
         <button
           className="
@@ -128,8 +133,9 @@ export default function Navbar() {
           transition
           "
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
-          {open ? <X size={32} /> : <Menu size={32} />}
+          {open ? <X size={27} /> : <Menu size={27} />}
         </button>
       </div>
 
@@ -140,13 +146,14 @@ export default function Navbar() {
           className="
           md:hidden
           bg-[#2f5233]
-          px-6
-          py-6
+          px-4
+          sm:px-6
+          py-5
           border-t
           border-white/20
           "
         >
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
                 key={link.name}
@@ -154,6 +161,8 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="
                 text-white
+                text-sm
+                sm:text-base
                 font-medium
                 hover:text-[#fef2cc]
                 transition
@@ -163,9 +172,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* MOBILE CONTACT ICONS */}
-
-            <div className="flex gap-4 pt-3">
+            <div className="flex gap-3 pt-2">
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -174,13 +181,13 @@ export default function Navbar() {
                 className="
                 bg-[#fef2cc]
                 text-[#2f5233]
-                p-3
+                p-2.5
                 rounded-full
                 hover:scale-110
                 transition
                 "
               >
-                <FaWhatsapp size={25} />
+                <FaWhatsapp size={22} />
               </a>
 
               <a
@@ -190,15 +197,14 @@ export default function Navbar() {
                 border
                 border-[#fef2cc]
                 text-[#fef2cc]
-                p-3
+                p-2.5
                 rounded-full
                 hover:bg-[#fef2cc]
                 hover:text-[#2f5233]
-                hover:scale-110
                 transition
                 "
               >
-                <MdEmail size={26} />
+                <MdEmail size={23} />
               </a>
             </div>
           </div>
