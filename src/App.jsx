@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Destinations from "./pages/Destinations";
 import Guides from "./pages/Guides";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>

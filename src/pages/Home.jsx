@@ -13,21 +13,21 @@ export default function Home() {
   const services = [
     {
       icon: <Compass />,
-      title: "Personalized Travel Planning",
+      title: "Personalized travel planning",
       description:
         "We create tailored Kenya travel plans based on your interests, time, budget, and preferred experiences.",
     },
 
     {
       icon: <MapPin />,
-      title: "Local Kenya Guidance",
+      title: "Local Kenya guidance",
       description:
         "Get reliable local insights about destinations, transport, culture, activities, and hidden gems across Kenya.",
     },
 
     {
       icon: <ShieldCheck />,
-      title: "Trusted Travel Support",
+      title: "Trusted travel support",
       description:
         "Make confident decisions with practical information and guidance before and during your Kenya journey.",
     },
@@ -58,8 +58,6 @@ export default function Home() {
 
   return (
     <>
-      {/* ================= HERO ================= */}
-
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <img
           src={Safari2}
@@ -71,14 +69,14 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white">
           <div className="max-w-3xl">
-            <p className="uppercase tracking-[0.3em] text-yellow-400 font-semibold text-sm md:text-base">
-              Your Kenya Travel Partner
+            <p className="uppercase tracking-[0.3em] text-[#fef2cc] font-semibold text-sm md:text-base">
+              Your Kenya travel partner
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mt-5 leading-tight text-white">
               Discover Kenya
               <br />
-              Beyond The Ordinary
+              Beyond the ordinary
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed">
@@ -90,14 +88,33 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+                className="
+                bg-[#fef2cc]
+                text-[#2f5233]
+                px-8
+                py-3
+                rounded-lg
+                font-semibold
+                hover:bg-white
+                transition
+                "
               >
-                Plan Your Journey
+                Plan your journey
               </Link>
 
               <Link
                 to="/destinations"
-                className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition"
+                className="
+                border
+                border-[#fef2cc]
+                text-[#fef2cc]
+                px-8
+                py-3
+                rounded-lg
+                hover:bg-[#fef2cc]
+                hover:text-[#2f5233]
+                transition
+                "
               >
                 Explore Kenya
               </Link>
@@ -106,48 +123,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= TRUST ================= */}
-
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="text-center">
-            <Globe className="mx-auto text-green-800" size={40} />
+            <Globe className="mx-auto text-[#4a2e1e]" size={40} />
 
-            <h3 className="font-bold text-xl mt-4">Local Expertise</h3>
+            <h3 className="font-bold text-xl mt-4 text-[#2f5233]">
+              Local expertise
+            </h3>
 
-            <p className="text-gray-600 mt-3">
+            <p className="mt-3 text-[#2f5233]">
               Authentic insights from people who understand Kenya.
             </p>
           </div>
 
           <div className="text-center">
-            <Star className="mx-auto text-green-800" size={40} />
+            <Star className="mx-auto text-[#4a2e1e]" size={40} />
 
-            <h3 className="font-bold text-xl mt-4">Authentic Experiences</h3>
+            <h3 className="font-bold text-xl mt-4 text-[#2f5233]">
+              Authentic experiences
+            </h3>
 
-            <p className="text-gray-600 mt-3">
+            <p className="mt-3 text-[#2f5233]">
               Discover Kenya beyond typical tourist routes.
             </p>
           </div>
 
           <div className="text-center">
-            <ShieldCheck className="mx-auto text-green-800" size={40} />
+            <ShieldCheck className="mx-auto text-[#4a2e1e]" size={40} />
 
-            <h3 className="font-bold text-xl mt-4">Reliable Support</h3>
+            <h3 className="font-bold text-xl mt-4 text-[#2f5233]">
+              Reliable support
+            </h3>
 
-            <p className="text-gray-600 mt-3">
+            <p className="mt-3 text-[#2f5233]">
               Guidance to help you travel with confidence.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ================= SERVICES ================= */}
+      <section className="bg-[#f8f7f2] py-20 px-6">
+        <h2 className="text-4xl font-bold text-center text-[#2f5233]">
+          How we help
+        </h2>
 
-      <section className="bg-gray-50 py-20 px-6">
-        <h2 className="text-4xl font-bold text-center">How We Help</h2>
-
-        <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-[#4a2e1e] mt-4 max-w-2xl mx-auto">
           From planning your first visit to discovering hidden experiences,
           Kenya Compass makes exploring Kenya simple.
         </p>
@@ -159,10 +180,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= DESTINATIONS ================= */}
-
       <section className="py-20 px-6">
-        <h2 className="text-4xl font-bold text-center">Explore Kenya</h2>
+        <h2 className="text-4xl font-bold text-center text-[#2f5233]">
+          Explore Kenya
+        </h2>
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mt-12">
           {destinations.map((item, index) => (
@@ -171,21 +192,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      <section className="bg-[#fef2cc] py-20 text-center px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2f5233]">
+            Ready to experience Kenya?
+          </h2>
 
-      <section className="bg-green-900 text-white py-20 text-center px-6">
-        <h2 className="text-4xl font-bold">Ready To Experience Kenya?</h2>
+          <p className="mt-5 text-[#4a2e1e] text-lg max-w-2xl mx-auto">
+            Start planning your journey with Kenya Compass today.
+          </p>
 
-        <p className="mt-5 text-gray-300">
-          Start planning your journey with Kenya Compass today.
-        </p>
-
-        <Link
-          to="/contact"
-          className="inline-block mt-8 bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
-        >
-          Get Started
-        </Link>
+          <Link
+            to="/contact"
+            className="
+            inline-block
+            mt-8
+            bg-[#2f5233]
+            text-white
+            px-8
+            py-3
+            rounded-lg
+            font-semibold
+            hover:bg-[#4a2e1e]
+            transition
+            "
+          >
+            Get started
+          </Link>
+        </div>
       </section>
     </>
   );

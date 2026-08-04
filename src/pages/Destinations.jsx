@@ -39,9 +39,8 @@ export default function Destinations() {
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h1 className="text-5xl font-bold">Explore Kenya</h1>
-
-          <p className="mt-5 text-gray-600 text-lg">
+          <h1 className="text-5xl font-bold text-[#4a2e1e]">Explore Kenya</h1>
+          <p className="mt-5 text-lg text-[#2f5233]">
             Discover some of Kenya's most remarkable destinations and
             experiences.
           </p>
